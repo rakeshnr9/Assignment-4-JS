@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Assignment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </head>
+<body>
+  <header style="height: 100px; background-color: aqua;">
+<h1>Assignment on Javascript</h1>
+  </header>
+<br>
+<h4>4. Write a JavaScript program to find the sum of squares of the elements of an array.</h4>
+ <div class="pl-4"><button type="button" onclick="myFunction4();" id="head" class="btn btn-primary"> Generate Output</button></div>
+
+<div id="answer"></div>
+
+<script>
+function myFunction4(){
+var numbers = prompt("Enter numbers separated by a comma [Ex:1,4,6]").split(",");
+ document.getElementById("head").innerHTML="Array is " + numbers;
+ //Square
+ function sum_sq(numbers) {
+  var sum = 0,
+      i = numbers.length;
+  while (i--)
+   sum += Math.pow(numbers[i], 2);
+  return sum;
+}
+console.log(sum_sq([0,1,2,3,4]));
+document.getElementById("answer").innerHTML="Sum of squares of the elements of array = "+sum_sq(numbers);
+};
+
+</script>
+
+
+</body>
+
+</html>

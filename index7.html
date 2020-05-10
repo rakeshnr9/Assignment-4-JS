@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Assignment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </head>
+<body>
+  <header style="height: 100px; background-color: aqua;">
+<h1>Assignment on Javascript</h1>
+  </header>
+<br>
+<h4>7. Write a JavaScript program that accept two integers and display the larger using findLarge() function.</h4>
+<br>
+<input type="text" id="inputA" placeholder="Enter input 1">
+<input type="text" id="inputB" placeholder="Enter input 2">
+<br><br>
+<div class="pl-4"><button type="button" onclick="myFunction7();" name="quesSeven"  class="btn btn-primary"> Generate Output</button></div>
+<div id="result"></div>
+
+<script>
+function findLarge(a, b) {
+    if (a > b) {
+    document.getElementById("result").innerHTML = ` Larger Number among ${a},${b} is : ${a}`;
+        return a;
+    } else if (a === b) {
+          document.getElementById("result").innerHTML = ` Both Numbers are equal among ${a},${b} `; return 0;
+    } else {
+        document.getElementById("result").innerHTML = ` Larger Number among ${a},${b} is : ${b}`;
+        return b;
+    };
+};
+function myFunction7() {
+    let a = parseInt(document.getElementById("inputA").value);
+    let b = parseInt(document.getElementById("inputB").value);
+    findLarge(a, b);
+};
+</script>
+
+
+
+</body>
+
+</html>
